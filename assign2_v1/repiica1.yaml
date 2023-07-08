@@ -8,13 +8,13 @@ spec:
     matchLabels:
       labels:
         name: myassignmentpod 
-        app: my-app
+        app: myapp
   template:
     metadata:
       labels:
        labels:
           name: myassignmentpod 
-          app: my-app
+          app: myapp
     spec:
       containers:
         - name: my-container
