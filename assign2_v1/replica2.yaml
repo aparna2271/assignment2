@@ -1,26 +1,30 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: dbreplicaset
+  name: replica-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      labels:
-        name: myassignmentpod 
-        app: my-app
+      app: employees
+      version: v1
   template:
     metadata:
       labels:
-       labels:
-          name: myassignmentpod 
-          app: my-app
+        app: employees
+        version: v1
     spec:
       containers:
-        - name: my-container
-          image: 475376810255.dkr.ecr.us-east-1.amazonaws.com/assignment1-datarepo:v0.1
+        - name: app
+          image: 475376810255.dkr.ecr.us-east-1.amazonaws.com/assignment1-mainrepo:v0.1
           ports:
-            - containerPort: 3306
+            - containerPort: 8080
           env:
-            - name: MYSQL_ROOT_PASSWORD
+            - name: DBHOST
+              value: mysqlservice.sqldb.svc.cluster.local
+            - name: DBUSER
+              value: root
+            - name: DBPORT
+              value: "3306"
+            - name: DBPWD
               value: assign2
