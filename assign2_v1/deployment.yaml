@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-deployment
+  labels: 
+    name: myassignmentpod 
+    app: my-app
+spec:
+  selector:
+    matchLabels:
+      name: myassignmentpod 
+      app: myapp
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: myassignmentpod 
+        app: myapp
+    spec:
+      containers:
+      - name: db-deployment
+        image: 475376810255.dkr.ecr.us-east-1.amazonaws.com/assignment1-datarepo:v0.1
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: assign2
