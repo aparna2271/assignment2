@@ -6,9 +6,8 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      labels:
-        name: myassignmentpod 
-        app: myapp
+      name: myassignmentpod 
+      app: myapp
   template:
     metadata:
       labels:
