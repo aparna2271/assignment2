@@ -11,9 +11,8 @@ spec:
   template:
     metadata:
       labels:
-       labels:
-          name: myassignmentpod 
-          app: myapp
+        name: myassignmentpod 
+        app: myapp
     spec:
       containers:
         - name: my-container
