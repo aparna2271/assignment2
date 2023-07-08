@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
     - name: app
-      image: 475376810255.dkr.ecr.us-east-1.amazonaws.com/assignment1-mainrepo
+      image: 475376810255.dkr.ecr.us-east-1.amazonaws.com/assignment1-mainrepo:v0.1
       ports:
       - containerPort: 3306
       env: 
