@@ -12,13 +12,13 @@ spec:
       ports:
       - containerPort: 3306
       env: 
-     - name: DBHOST
-       value: mysqlsvc.sqldb.svc.cluster.local
-     - name: DBUSER
-       value: root
-     - name: DBPORT
-       value: "3306"
-     - name: APP_COLOR
-       value: blue
-     - name: DBPWD
-       value: assign2
+      - name: DBHOST
+        value: mysqlsvc.sqldb.svc.cluster.local
+      - name: DBUSER
+        value: root
+      - name: DBPORT
+        value: "3306"
+      - name: APP_COLOR
+        value: blue
+      - name: DBPWD
+        value: assign2
