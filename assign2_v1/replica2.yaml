@@ -21,10 +21,12 @@ spec:
             - containerPort: 8080
           env:
             - name: DBHOST
-              value: mysqlservice.sqldb.svc.cluster.local
+              value: mysqlsvc.sqldb.svc.cluster.local
             - name: DBUSER
               value: root
             - name: DBPORT
               value: "3306"
             - name: DBPWD
               value: assign2
+            - name: APP_COLOR
+              value: blue
