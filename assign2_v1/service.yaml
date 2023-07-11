@@ -3,10 +3,12 @@ kind: Service
 metadata:
   name: mysqlsvc
   labels:
-    name: myassignmentpod
+    name: myassignmentpod 
+    app: my-app
 spec:
   ports:
   - port: 3306
     targetPort: 3306
   selector:
-    name: myassignmentpod
+    name: myassignmentpod 
+    app: my-app

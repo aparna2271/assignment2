@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   name: app-deployment
   labels: 
-    name: myassignmentpod 
-    app: my-app
+    app: employees
+    version: v1
 spec:
   selector:
     matchLabels:

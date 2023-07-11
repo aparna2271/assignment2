@@ -6,13 +6,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      name: myassignmentpod 
-      app: myapp
-  template:
-    metadata:
       labels:
         name: myassignmentpod 
         app: myapp
+  template:
+    metadata:
+      labels:
+          name: myassignmentpod 
+          app: myapp
     spec:
       containers:
         - name: my-container
