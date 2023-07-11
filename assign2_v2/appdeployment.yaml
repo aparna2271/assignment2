@@ -1,0 +1,39 @@
+apiVersion: apps/v2
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels: 
+    name: myassignmentpod 
+    app: my-app
+spec:
+  selector:
+    matchLabels:
+       app: employees
+       version: v2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: employees
+        version: v2
+    spec:
+      containers:
+      - name: app-deployment
+        image: 475376810255.dkr.ecr.us-east-1.amazonaws.com/assignment1-mainrepo:v0.2
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 8080
+        env: 
+        - name: DBHOST
+          value: mysqlsvc.sqldb.svc.cluster.local
+        - name: DBUSER
+          value: root
+        - name: DBPORT
+          value: "3306"
+        - name: APP_COLOR
+          value: blue
+        - name: DBPWD
+          value: assign2
