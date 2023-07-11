@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: replica-app
+  labels:
+    app: employees
+    version: v1
 spec:
   replicas: 3
   selector:
