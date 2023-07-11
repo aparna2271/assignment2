@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-deployment
+  name: app-deployment-v02
   labels: 
-    name: myassignmentpod 
-    app: my-app
+    app: employees 
+    version: v2
 spec:
   selector:
     matchLabels:
        app: employees
-       version: v1
+       version: v2
   replicas: 1
   template:
     metadata:
       labels:
         app: employees
-        version: v1
+        version: v2
     spec:
       containers:
       - name: app-deployment
