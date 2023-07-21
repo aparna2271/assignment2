@@ -10,5 +10,5 @@ spec:
   - port: 3306
     targetPort: 3306
   selector:
-    name: myassignmentpod 
-    app: my-app
+    app: employees
+    version: v1
