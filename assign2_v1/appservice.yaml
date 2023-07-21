@@ -11,6 +11,6 @@ spec:
     targetPort: 8080
     nodePort: 30001
   selector:
-     name: myassignmentpod 
-     app: my-app
+     app: employees
+     version: v1
  
