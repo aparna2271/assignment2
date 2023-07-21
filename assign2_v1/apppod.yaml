@@ -2,23 +2,19 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: app
-  labels:
-    name: myassignmentpod 
-    app: my-app
 spec:
   containers:
     - name: app
       image: 475376810255.dkr.ecr.us-east-1.amazonaws.com/assignment1-mainrepo:v0.1
       ports:
-      - containerPort: 8080
-      env: 
-      - name: DBHOST
-        value: mysqlsvc.sqldb-ap.svc.cluster.local
-      - name: DBUSER
-        value: root
-      - name: DBPORT
-        value: "3306"
-      - name: APP_COLOR
-        value: blue
-      - name: DBPWD
-        value: assign2
+        - containerPort: 8080
+      env:
+        - name: DBHOST
+          value: 10.244.0.5
+        - name: DBUSER
+          value: root
+        - name: DBPORT
+          value: "3306"
+        - name: APP_COLOR
+          value: blue
+        - name: DBPWD
