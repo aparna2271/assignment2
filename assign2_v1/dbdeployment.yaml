@@ -4,7 +4,7 @@ metadata:
   name: db-deployment
   labels: 
     name: myassignmentpod 
-    app: my-app
+    app: myapp
 spec:
   selector:
     matchLabels:
