@@ -24,7 +24,7 @@ spec:
             - containerPort: 8080
           env:
             - name: DBHOST
-              value: 10.244.0.16
+              value: 10.244.0.17
             - name: DBUSER
               value: root
             - name: DBPORT
