@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-deployment
-  labels: 
+  labels:
     app: employees
     version: v1
 spec:
@@ -26,9 +26,9 @@ spec:
             memory: 100Mi
         ports:
         - containerPort: 8080
-        env: 
+        env:
         - name: DBHOST
-          value: 10.244.0.24
+          value: 10.244.0.27
         - name: DBUSER
           value: root
         - name: DBPORT
