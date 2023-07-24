@@ -7,14 +7,15 @@ spec:
     - name: app
       image: 475376810255.dkr.ecr.us-east-1.amazonaws.com/assignment1-mainrepo:v0.1
       ports:
-        - containerPort: 8080
-      env:
-        - name: DBHOST
-          value: 10.244.0.16
-        - name: DBUSER
-          value: root
-        - name: DBPORT
-          value: "3306"
-        - name: APP_COLOR
-          value: blue
-        - name: DBPWD
+      - containerPort: 8080
+      env: 
+      - name: DBHOST
+        value: 10.244.0.17
+      - name: DBUSER
+        value: root
+      - name: DBPORT
+        value: "3306"
+      - name: APP_COLOR
+        value: blue
+      - name: DBPWD
+        value: assign2
