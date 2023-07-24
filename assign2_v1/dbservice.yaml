@@ -4,11 +4,11 @@ metadata:
   name: mysqlsvc
   labels:
     name: myassignmentpod 
-    app: my-app
+    app: myapp
 spec:
   ports:
   - port: 3306
     targetPort: 3306
   selector:
     app: employees
-    version: v1
+    version: v1  
